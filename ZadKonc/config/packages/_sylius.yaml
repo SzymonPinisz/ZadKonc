@@ -239,3 +239,10 @@ sylius_theme:
             scan_depth: 1
             directories:
                 - "%kernel.project_dir%/themes"
+
+#resource thingy
+sylius_resource:
+    resources:
+        app.colorproperty:
+            classes:
+                model: App\Entity\ColorProperty
