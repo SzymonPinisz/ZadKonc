@@ -46,7 +46,11 @@ class ColorProperty implements ColorPropertyInterface{
     }
  
     public function getColor(): ?string{
-        return $this->color;
+        if($this -> color){
+            return $this->color;
+        }else{
+            return "";
+        }
     }public function setColor(?string $color): void{
         $this-> color = $color;
     }

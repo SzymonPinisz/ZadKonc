@@ -33,4 +33,13 @@ class Product extends BaseProduct{
     }public function setColor(ColorPropertyInterface $color): void {
         $this -> color = $color;
     }
+
+    //Thhis function is for twig purposes
+    public function getColorProperty(): String {
+        if($this -> color){
+            return $this -> color -> getColor();
+        }else{
+            return "";
+        }
+    }
 }

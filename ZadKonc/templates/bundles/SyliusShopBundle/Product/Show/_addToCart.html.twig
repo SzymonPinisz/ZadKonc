@@ -16,8 +16,10 @@
         {% endif %}
     {% endif %}
     {{ form_row(form.cartItem.quantity, sylius_test_form_attribute('quantity')) }}
-    {# Lopatologicznie #}
-gjjg
+    {# Łopatologicznie #}
+    <div style="padding: 5px; margin: 5px; border-radius: 5px; color:#fff; background-color: {{ product.getColorProperty() }}">
+    <b><h1>{{ product.getColorProperty() }}</h1></b>
+    </div>
 
     {{ sylius_template_event('sylius.shop.product.show.add_to_cart_form', {'product': product, 'order_item': order_item, 'form': form}) }}
 
