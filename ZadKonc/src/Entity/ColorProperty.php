@@ -1,41 +1,27 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
-use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections;
 use Doctrine\Common\Collections\Collection;
 use phpDocumentor\Reflection\Types\Integer;
-
-    /**
-     * @ORM\Entity
-     * @ORM\Table(name="app_color")
-     * @ApiResource
-     */
-
 class ColorProperty implements ColorPropertyInterface{
 
     /**
      * @var int|null
-     * 
-     * @ORM\Column(type="integer")
-     * @ORM\Id
-     * 
     */
     private $id;
 
     /**
      * @var string
-     * @ORM\Column(type="string")
-     *
      */
     private $color;
 
     /**
      * @var Collection
-     * 
-     * @ORM\OneToMany(targetEntity="App\Entity\Product\Product", mappedBy="colors")
      */
     private $products;
 
