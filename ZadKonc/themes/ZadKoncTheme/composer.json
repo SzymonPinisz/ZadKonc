@@ -1,0 +1,14 @@
+{
+    "name": "sylius/zad-konc-theme",
+    "authors": [
+        {
+            "name": "Szymon Pinisz",
+            "email": "piniszszymon@gmail.com"
+        }
+    ],
+    "extra": {
+        "sylius-theme":{
+            "title": "ZadKonc"
+        }
+    }
+}
