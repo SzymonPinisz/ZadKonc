@@ -25,7 +25,7 @@ class GenerateColorsCommand extends Command{
 
     /** @var ObjectManager */
     private $colorpropertyManager;
-
+    
     public function __construct(ObjectManager $colorpropertyManager, FactoryInterface $colorpropertyFactory){
         $this -> colorpropertyManager = $colorpropertyManager;
         $this -> colorpropertyFactory = $colorpropertyFactory;
@@ -70,11 +70,13 @@ class GenerateColorsCommand extends Command{
         $this -> colorpropertyManager -> persist($blue);
         
         if(!$this -> colorpropertyManager -> flush()){
-            return Command::FAILURE;
+            //return Command::FAILURE;
+            return 1;
         }
 
         $io->success('Successfully added Red, Green and Blue!');
 
-        return Command::SUCCESS;
+        //return Command::SUCCESS;
+        return 0;
     }
 }
