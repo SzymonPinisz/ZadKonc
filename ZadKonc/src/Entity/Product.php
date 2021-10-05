@@ -11,7 +11,9 @@ use Sylius\Component\Product\Model\ProductTranslationInterface;
 
 class Product extends BaseProduct implements ProductInterface{
 
-    /** @var ColorPropertyInterface */
+    /**
+     * @var ColorPropertyInterface
+     */
     private $color;
 
     public function getColor(): ?ColorPropertyInterface {
